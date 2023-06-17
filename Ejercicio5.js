@@ -49,9 +49,9 @@ function spiralPrint(matriz, codigo) {
     return matriz;
   }
   
-  function createArr(arrSpiral) {
-    const filas = Math.ceil(Math.sqrt(arrSpiral.length));
-    const columnas = Math.ceil(arrSpiral.length / filas);
+  function ArrayToSpiral(Spiral) {
+    const filas = Math.ceil(Math.sqrt(Spiral.length));
+    const columnas = Math.ceil(Spiral.length / filas);
     const matriz = [];
     for (let i = 0; i < filas; i++) {
       const fila = [];
@@ -61,9 +61,9 @@ function spiralPrint(matriz, codigo) {
       matriz.push(fila);
     }
   
-    return spiralPrint(matriz, arrSpiral);
+    return spiralPrint(matriz, Spiral);
   }
   
   let matriz = [1, 2, 3, 6, 9, 8, 7, 4, 5]; // No funciona con una matriz irregular
   
-  console.log(createArr(matriz));
+  console.log(ArrayToSpiral(matriz));
